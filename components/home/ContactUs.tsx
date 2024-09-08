@@ -1,21 +1,33 @@
-import Image from "next/image";
+import ContactForm from "./ContactForm";
+import { CONTACT_INFO } from "@/lib/constants";
+import Icon from "../shared/LucideIcon";
 
 export default function ContactUs() {
   return (
-    <section className="flex">
-      <div className="w-full h-full relative rounded-full">
-        <Image
-          src={"/world_map.svg"}
-          alt="immage"
-          fill
-          style={{ objectFit: "contain" }}
-        />
+    <section
+      id="contact"
+      className="flex justify-between items-center px-24 gap-6 min-h-[100dvh] bg-world-map bg-no-repeat bg-center bg-opacity-5"
+    >
+      <div className="space-y-8 w-full pl-[5%]">
+        <ContactForm />
       </div>
-      <div>
-        <h3>Get In Touch With Us</h3>
-        <form action="">
-          <input type="text" placeholder="Your Name" />
-        </form>
+      <div className="w-full flex flex-col gap-12">
+        {CONTACT_INFO.map((info) => {
+          return (
+            <div className="flex gap-3" key={info.title}>
+              <a
+                href={info.href}
+                className="h-[84px] min-w-[84px] bg-primary grid place-items-center"
+              >
+                <Icon name={info.icon} color="#bf2425" size="48" fill="white" />
+              </a>
+              <div className="space-y-2 p-2">
+                <p>{info.title}</p>
+                <p>{info.content}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -1,10 +1,15 @@
+// "use client";
+
 import Image from "next/image";
+import Icon from "../shared/LucideIcon";
+import { ABOUT_US } from "@/lib/constants";
 
 export default function AboutUs() {
+  // const router = useRouter();
   return (
     <>
       {/* Who We Are */}
-      <section className="min-h-[100dvh] p-20 space-y-6">
+      <section className="min-h-[100dvh] p-20 space-y-6" id="about">
         <h2 className="text-5xl font-bold">Who We Are</h2>
         <div className="flex justify-between">
           <div className="w-4/6 space-y-6">
@@ -14,39 +19,36 @@ export default function AboutUs() {
               travel and logistics industries. What began has a small startup
               has grown into a comprehensive service provide, trusted by
               countless customers for our commitment to excellence and
-              innovation.{" "}
+              innovation.
             </p>
-            <div className="h-20 text-2xl font-bold w-[600px] text-white rounded-full grid grid-cols-3 place-items-center bg-red-500 hover:bg-red-600 px-8">
-              <span></span>
-              <span className="">Our Mission</span>
-              <span className="justify-self-end">icon</span>
-            </div>
-            <div className="h-20 text-2xl font-bold w-[600px] text-white rounded-full grid grid-cols-3 place-items-center bg-red-500 hover:bg-red-600 px-8">
-              <span></span>
-              <span className="">Our Value</span>
-              <span className="justify-self-end">icon</span>
-            </div>
-            <div className="h-20 text-2xl font-bold w-[600px] text-white rounded-full grid grid-cols-3 place-items-center bg-red-500 hover:bg-red-600 px-8">
-              <span></span>
-              <span className="">Our Team</span>
-              <span className="justify-self-end">icon</span>
-            </div>
+            {ABOUT_US.map((item) => (
+              <a
+                href={item.href}
+                key={item.href}
+                className="cursor-pointer h-20 text-2xl font-bold w-[600px] text-white rounded-full grid grid-cols-3 place-items-center bg-[#bd4b4c] hover:bg-primary px-8"
+              >
+                <span></span>
+                <span>{item.title}</span>
+                <span className="justify-self-end">
+                  <Icon name="milestone" size={32} />
+                </span>
+              </a>
+            ))}
           </div>
-          <div>
+          <div className="relative w-[400px] h-[400px]">
             <Image
-              src={"/profile.png"}
+              src={"/delivery.svg"}
               alt="hi"
-              width={200}
-              height={600}
-              style={{ width: "auto", height: "auto" }}
+              fill
+              style={{ objectFit: "contain" }}
             />
           </div>
         </div>
       </section>
       {/* Mission & Value */}
-      <section className="min-h-[100dvh] p-16 relative">
+      <section className="min-h-[100dvh] p-16 relative" id="mission">
         <h2 className="text-4xl font-bold">Our Mission And Value Statement</h2>
-        <div className="bg-red-700 absolute top-[25%] left-0 w-[500px] rounded-r-full p-10 text-white space-y-4">
+        <div className="bg-primary absolute top-[25%] left-0 w-[500px] rounded-r-full p-10 text-white space-y-4">
           <h4 className="font-semibold">
             To Simplify Your Journey and Deliver with Precision
           </h4>
@@ -70,7 +72,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="min-h-[200px] bg-red-700 absolute bottom-[10%] right-0 w-[500px] rounded-l-full p-10 text-white space-y-2">
+        <div className="min-h-[200px] bg-primary absolute bottom-[10%] right-0 w-[500px] rounded-l-full p-10 text-white space-y-2">
           <h4 className="text-center font-semibold  ">
             Customer Centric Approach
           </h4>
@@ -93,9 +95,9 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
-        <div className="w-[300px] h-[500px] border-black border rounded-full absolute top-[20%] left-[40%]">
+        <div className="w-[300px] h-[500px] rounded-full absolute top-[20%] left-[40%]">
           <Image
-            src={"/profile.png"}
+            src={"/delivery.svg"}
             alt="immage"
             fill
             style={{ objectFit: "contain" }}
@@ -103,12 +105,12 @@ export default function AboutUs() {
         </div>
       </section>
       {/* Our Team */}
-      <section className="min-h-[100dvh] p-16 relative">
-        <h2 className="text-5xl font-bold text-center mb-32">Our Team</h2>
+      <section className="min-h-[100dvh] p-16 relative" id="team">
+        <h2 className="text-5xl font-bold text-center mb-16">Our Team</h2>
         <div className="flex w-full justify-around">
           <div className="relative w-[350px] h-[400px] bg-red-600">
             <Image
-              src={"/profile.png"}
+              src={"/delivery.svg"}
               alt="immage"
               fill
               style={{ objectFit: "cover" }}
@@ -122,7 +124,7 @@ export default function AboutUs() {
           </div>
           <div className="relative w-[350px] h-[400px] bg-red-600">
             <Image
-              src={"/profile.png"}
+              src={"/delivery.svg"}
               alt="immage"
               fill
               style={{ objectFit: "cover" }}
@@ -136,7 +138,7 @@ export default function AboutUs() {
           </div>{" "}
           <div className="relative w-[350px] h-[400px] bg-red-600">
             <Image
-              src={"/profile.png"}
+              src={"/delivery.svg"}
               alt="immage"
               fill
               style={{ objectFit: "cover" }}
