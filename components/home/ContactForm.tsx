@@ -49,7 +49,7 @@ export default function ContactForm() {
   }
   if (serverState.succeeded) {
     return (
-      <div className="px-12">
+      <div className="w-full text-center">
         <h1>Thanks for reaching out!</h1>
       </div>
     );
@@ -60,7 +60,7 @@ export default function ContactForm() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(sendToFormspree)}
-          className="space-y-8 flex flex-col pr-[40%]"
+          className="space-y-8 flex flex-col lg:pr-[40%]"
         >
           <FormField
             control={form.control}

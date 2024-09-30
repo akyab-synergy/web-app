@@ -6,9 +6,9 @@ export default function ContactUs() {
   return (
     <section
       id="contact"
-      className="flex justify-between items-center px-24 gap-6 min-h-[100dvh] bg-world-map bg-no-repeat bg-center bg-opacity-5"
+      className="flex flex-wrap lg:flex-nowrap justify-between items-center px-6 py-12 lg:pt-0 lg:px-24 gap-16 lg:gap-6 min-h-[100dvh] bg-world-map bg-no-repeat bg-center bg-opacity-5"
     >
-      <div className="space-y-8 w-full pl-[5%]">
+      <div className="space-y-8 w-full lg:pl-[5%]">
         <ContactForm />
       </div>
       <div className="w-full flex flex-col gap-12">
