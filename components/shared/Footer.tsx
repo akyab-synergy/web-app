@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="border-r-0 md:border-r-2 h-0 md:h-5" />
         <li>Terms & Conditions</li>
       </ul>
-      <div className="text-center order-first md:order-none">
+      <div className="text-sm text-center order-first md:order-none">
         © 2024 Akyab Syngery. All rights reserved.
       </div>
       <ul className="flex justify-center lg:justify-end items-center gap-4 text-xl self-end">
@@ -18,7 +18,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFacebook className="hover:text-black" />
+            <FaFacebook className="hover:opacity-80" />
           </a>
         </li>
         <li>
@@ -27,7 +27,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTelegram className="hover:text-black" />
+            <FaTelegram className="hover:opacity-80" />
           </a>
         </li>
       </ul>

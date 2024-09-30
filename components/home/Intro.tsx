@@ -11,7 +11,7 @@ export default function Intro() {
       </p>
       <a
         href="tel:09422755012"
-        className="px-6 py-4 bg-primary text-base w-full lg:w-auto text-center lg:text-lg text-white font-bold"
+        className="hover:scale-110 transition-transform duration-300 px-6 py-4 bg-primary text-base w-full lg:w-auto text-center lg:text-lg text-white font-bold"
       >
         CALL FOR SERVICE NOW
       </a>

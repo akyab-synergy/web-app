@@ -17,11 +17,11 @@ export default function ContactUs() {
             <div className="flex gap-3" key={info.title}>
               <a
                 href={info.href}
-                className="h-[84px] min-w-[84px] bg-primary grid place-items-center"
+                className="min-w-16 h-16 lg:h-[84px] lg:min-w-[84px] bg-primary hover:scale-110 transition-transform duration-300 grid place-items-center"
               >
                 <Icon name={info.icon} color="#bf2425" size="48" fill="white" />
               </a>
-              <div className="space-y-2 p-2">
+              <div className="space-y-2 p-2 text-sm lg:text-base">
                 <p>{info.title}</p>
                 <p>{info.content}</p>
               </div>

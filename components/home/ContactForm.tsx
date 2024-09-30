@@ -99,7 +99,7 @@ export default function ContactForm() {
             )}
           />
           <Button
-            className="rounded-full hover:bg-red-900 w-40 h-[58px] font-semibold text-lg self-center"
+            className="rounded-full hover:scale-110 transition-transform duration-300 w-40 h-[58px] font-semibold text-lg self-center"
             type="submit"
           >
             Submit

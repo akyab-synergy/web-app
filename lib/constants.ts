@@ -66,7 +66,7 @@ export const ABOUT_US = [
   },
   {
     title: "Our Value",
-    href: "#mission",
+    href: "#value",
   },
   {
     title: "Our Team",

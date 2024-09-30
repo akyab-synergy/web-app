@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <>
       <div
-        className="bg-primary min-h-[25dvh] flex flex-wrap justify-center lg:px-0 lg:justify-around items-center gap-3 py-6 lg:py-0"
+        className="bg-primary min-h-[25dvh] flex flex-wrap justify-center px-2 lg:px-0 lg:justify-around items-center gap-3 py-6 lg:py-0"
         id="service"
       >
         {SERVICES.map((service) => (
@@ -15,9 +15,9 @@ export default function Services() {
             key={service.title}
           >
             <Icon className="hidden lg:block" name={service.icon} size={58} />
-            <Icon className="lg:hidden" name={service.icon} size={36} />
+            <Icon className="lg:hidden" name={service.icon} size={28} />
 
-            <p className="text-xl">{service.description}</p>
+            <p className="lg:text-xl">{service.description}</p>
           </div>
         ))}
       </div>

@@ -10,16 +10,14 @@ export default function MissionVision() {
   const missionDivIsInView = useInView(missionDiv);
   const valueDivIsInView = useInView(valueDiv);
   return (
-    <section
-      className="h-[1000px] lg:min-h-[100dvh] px-6 py-8 lg:p-16 relative"
-      id="mission"
-    >
+    <section className="min-h-[1000px] lg:min-h-[100dvh] px-6 py-8 lg:p-16 relative overflow-x-hidden">
       <h2 className="text-2xl lg:text-4xl font-bold">
         Our Mission And Value Statement
       </h2>
       <div
+        id="mission"
         ref={missionDiv}
-        className={`bg-primary absolute top-[15%] lg:top-[25%] left-0 w-[340px] lg:w-[500px] rounded-r-full p-8 lg:p-10 text-white space-y-4 transition-transform duration-700 ease-in-out ${
+        className={`scroll-m-32 hover:scale-110 bg-primary absolute top-[15%] lg:top-[25%] left-0 w-[340px] lg:w-[500px] rounded-r-full p-8 lg:p-10 text-white space-y-4 transition-transform duration-700 ease-in-out ${
           missionDivIsInView
             ? "transform translate-x-0"
             : "transform translate-x-[-200px]"
@@ -49,8 +47,9 @@ export default function MissionVision() {
         </div>
       </div>
       <div
+        id="value"
         ref={valueDiv}
-        className={`min-h-[200px] bg-primary absolute bottom-[0%] lg:bottom-[10%] right-0 w-[340px] lg:w-[500px] rounded-l-full p-10 text-white space-y-2 transition-transform duration-700 ease-in-out ${
+        className={`scroll-m-10 hover:scale-110 min-h-[200px] bg-primary absolute bottom-[0%] lg:bottom-[10%] right-0 w-[340px] lg:w-[500px] rounded-l-full p-10 text-white space-y-2 transition-transform duration-700 ease-in-out ${
           valueDivIsInView
             ? "transform translate-x-0"
             : "transform translate-x-[200px]"
@@ -78,7 +77,7 @@ export default function MissionVision() {
           </p>
         </div>
       </div>
-      <div className="w-[300px] h-[500px] rounded-full absolute top-[35%] left-0 right-0 lg:top-[20%] lg:left-[40%]">
+      <div className="w-[300px] h-[500px] rounded-full absolute top-[60%] left-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 lg:top-[60%] lg:left-1/2">
         <Image
           src={"/delivery.svg"}
           alt="immage"

@@ -11,7 +11,7 @@ export default function AboutUs() {
         className="min-h-[100dvh] py-10 px-6 lg:p-20 space-y-6"
         id="about"
       >
-        <h2 className="text-center lg:text-left text-5xl font-bold">
+        <h2 className="text-center lg:text-left text-3xl lg:text-5xl font-bold">
           Who We Are
         </h2>
         <div className="flex flex-wrap-reverse lg:flex-nowrap justify-between">
@@ -41,7 +41,7 @@ export default function AboutUs() {
               </a>
             ))}
           </div>
-          <div className="relative w-[400px] h-[400px]">
+          <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
             <Image
               src={"/delivery.svg"}
               alt="hi"
