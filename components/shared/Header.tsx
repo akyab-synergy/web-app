@@ -25,7 +25,7 @@ export default function Header(): React.ReactNode {
         <div className="relative w-[180px] h-[180px]">
           <Image src={"/logo.jpg"} alt="AKYAB logo" fill />
         </div>
-        <ul className="flex items-center font-bold text-lg gap-16 pt-10 pb-16">
+        <ul className="flex items-center font-bold text-lg gap-16 pt-10 pb-16 hover-nav">
           <li>
             <a href="/">Home</a>
           </li>

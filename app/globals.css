@@ -70,3 +70,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.hover-nav > li:hover {
+  @apply text-primary;
+}
