@@ -10,7 +10,7 @@ export default function MissionVision() {
   const missionDivIsInView = useInView(missionDiv);
   const valueDivIsInView = useInView(valueDiv);
   return (
-    <section className="min-h-[1000px] lg:min-h-[100dvh] px-6 py-12 lg:p-16 relative overflow-x-hidden">
+    <section className="min-h-[1000px] lg:min-h-[100dvh] px-6 py-12 lg:p-16 relative overflow-hidden">
       <h2 className="text-2xl lg:text-4xl font-bold">
         Our Mission And Value Statement
       </h2>
