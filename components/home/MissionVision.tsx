@@ -10,7 +10,7 @@ export default function MissionVision() {
   const missionDivIsInView = useInView(missionDiv);
   const valueDivIsInView = useInView(valueDiv);
   return (
-    <section className="min-h-[1000px] lg:min-h-[100dvh] px-6 py-8 lg:p-16 relative overflow-x-hidden">
+    <section className="min-h-[1000px] lg:min-h-[100dvh] px-6 py-12 lg:p-16 relative overflow-x-hidden">
       <h2 className="text-2xl lg:text-4xl font-bold">
         Our Mission And Value Statement
       </h2>
@@ -37,12 +37,7 @@ export default function MissionVision() {
             Our Mission
           </p>
           <div className="relative w-[280px] h-[80px]">
-            <Image
-              src={"/goal.png"}
-              alt="hi"
-              fill
-              style={{ objectFit: "contain" }}
-            />
+            <Image src={"/goal.png"} alt="hi" width={280} height={80} />
           </div>
         </div>
       </div>
@@ -62,9 +57,9 @@ export default function MissionVision() {
           <div className="relative w-[150px] h-[80px]">
             <Image
               src={"/diamond.png"}
-              alt="hi"
-              fill
-              style={{ objectFit: "contain" }}
+              alt="diamond image"
+              width={150}
+              height={80}
             />
           </div>
           <p className="text-sm">
@@ -77,10 +72,10 @@ export default function MissionVision() {
           </p>
         </div>
       </div>
-      <div className="w-[300px] h-[500px] rounded-full absolute top-[60%] left-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 lg:top-[60%] lg:left-1/2">
+      <div className="w-[300px] h-[500px] rounded-full absolute top-[60%] left-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 lg:top-[50%] lg:left-1/2">
         <Image
-          src={"/delivery.svg"}
-          alt="immage"
+          src={"/mission-vision.svg"}
+          alt="Mission and Vision"
           fill
           style={{ objectFit: "contain" }}
         />

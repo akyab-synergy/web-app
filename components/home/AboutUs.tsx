@@ -2,6 +2,7 @@ import Image from "next/image";
 import Icon from "../shared/LucideIcon";
 import { ABOUT_US } from "@/lib/constants";
 import MissionVision from "./MissionVision";
+import React from "react";
 
 export default function AboutUs() {
   return (
@@ -55,7 +56,7 @@ export default function AboutUs() {
       <MissionVision />
 
       {/* Our Team */}
-      <section className="p-6 lg:p-16 relative" id="team">
+      <section className="px-6 pt-16 lg:p-16 relative" id="team">
         <h2 className="text-5xl font-bold text-center mb-10 lg:mb-16">
           Our Team
         </h2>

@@ -1,6 +1,7 @@
-import { SERVICE_IMAGES, SERVICES } from "@/lib/constants";
+import { SERVICES, SERVICES_2 } from "@/lib/constants";
 import Image from "next/image";
 import Icon from "../shared/LucideIcon";
+import React from "react";
 
 export default function Services() {
   return (
@@ -23,15 +24,24 @@ export default function Services() {
       </div>
       <div className="min-h-[75dvh] flex flex-col gap-10 items-center py-10 lg:px-20">
         <h2 className="font-bold text-3xl">Our Services</h2>
-        <div className="flex flex-wrap justify-around items-center w-full space-y-6">
-          {SERVICE_IMAGES.map((image: string) => (
-            <div className="space-y-2 lg:space-y-5 text-center" key={image}>
-              <div className="border-[3px] border-transparent hover:border-primary rounded-2xl relative w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]">
-                <Image src={image} alt="hello" fill />
+        <div className="flex flex-wrap justify-around items-center w-full space-y-6 lg:space-y-0">
+          {SERVICES_2.map(
+            (service: { title: string; image: string }, index: number) => (
+              <div className="space-y-2 lg:space-y-5 text-center" key={index}>
+                <div className="border-[4px] border-transparent hover:border-primary rounded-2xl relative w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    sizes="100%"
+                    fill
+                    className="rounded-[12px]"
+                    objectFit="cover"
+                  />
+                </div>
+                <h3 className="font-semibold text-xl">{service.title}</h3>
               </div>
-              <h3 className="font-semibold text-xl">Lorem Ipsum</h3>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </>

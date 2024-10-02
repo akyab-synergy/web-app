@@ -7,7 +7,9 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
+  DrawerTitle,
   DrawerTrigger,
 } from "../ui/drawer";
 
@@ -23,7 +25,7 @@ export default function Header(): React.ReactNode {
     <header className="flex justify-center w-full">
       <nav className="justify-between w-full h-[200px] max-w-screen-2xl hidden lg:flex px-12">
         <div className="relative w-[180px] h-[180px]">
-          <Image src={"/logo.jpg"} alt="AKYAB logo" fill />
+          <Image src={"/logo.jpg"} alt="AKYAB logo" width={180} height={180} />
         </div>
         <ul className="flex items-center font-bold text-lg gap-16 pt-10 pb-16 hover-nav">
           <li>
@@ -42,13 +44,16 @@ export default function Header(): React.ReactNode {
       </nav>
       <nav className="flex items-center justify-between w-full h-[100px] max-w-screen-2xl lg:hidden px-4">
         <div className="relative w-[100px] h-[100px]">
-          <Image src={"/logo.jpg"} alt="AKYAB logo" fill />
+          <Image src={"/logo.jpg"} alt="AKYAB logo" width={100} height={100} />
         </div>
         <Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
           <DrawerTrigger asChild>
             <Menu />
           </DrawerTrigger>
           <DrawerContent className="h-[100dvh] px-7 pt-3 ">
+            <DrawerTitle />
+            <DrawerDescription />
+
             <div className="space-y-8">
               <button
                 className="text-2xl ml-[96%]"
@@ -57,7 +62,12 @@ export default function Header(): React.ReactNode {
                 <X />
               </button>
               <div className="relative w-[100px] h-[100px] mx-auto">
-                <Image src={"/logo.jpg"} alt="AKYAB logo" fill />
+                <Image
+                  src={"/logo.jpg"}
+                  alt="AKYAB logo"
+                  width={100}
+                  height={100}
+                />
               </div>
               <ul className="w-full space-y-8 text-center text-[#db3c2c]">
                 <li>
