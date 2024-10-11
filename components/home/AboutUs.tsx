@@ -15,7 +15,7 @@ export default function AboutUs() {
         <h2 className="text-center lg:text-left text-3xl lg:text-5xl font-bold">
           Who We Are
         </h2>
-        <div className="flex flex-wrap-reverse lg:flex-nowrap justify-between">
+        <div className="flex flex-wrap-reverse lg:flex-nowrap justify-center">
           <div className="lg:w-4/6 space-y-6">
             <p className="text-lg">
               Founded in 2024, Akyab Synergy Company started with a simple goal:
