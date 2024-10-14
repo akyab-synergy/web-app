@@ -43,7 +43,7 @@ export default function Footer() {
                     <h3>TERMS & CONDITIONS</h3>
                   </DrawerTitle>
                   <DrawerDescription>
-                    <ul className="list-disc space-y-4 w-full text-sm mt-6">
+                    <ul className="list-disc space-y-4 w-full text-sm mt-6 text-left">
                       <li>
                         စာရွက်စာတန်း နှင့် ကုန်ပစ္စည်းများ
                         လုံခြုံစိတ်ချမှုရှိစေရန် ထုတ်ပိုးပေးရမည်မှာ ပေးပို့သူ၏
