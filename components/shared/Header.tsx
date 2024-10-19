@@ -15,8 +15,6 @@ import {
 
 export default function Header(): React.ReactNode {
   const [isOpen, setIsOpen] = useState(false);
-  const [container, setContainer] = React.useState(null);
-
   const handleLinkClick = () => {
     setIsOpen(false);
   };
@@ -24,21 +22,21 @@ export default function Header(): React.ReactNode {
   return (
     <header className="flex justify-center w-full">
       <nav className="justify-between w-full h-[200px] max-w-screen-2xl hidden lg:flex px-12">
-        <div className="relative w-[180px] h-[180px]">
+        <a className="block relative w-[180px] h-[180px]" href="/">
           <Image src={"/logo.jpg"} alt="AKYAB logo" width={180} height={180} />
-        </div>
+        </a>
         <ul className="flex items-center font-bold text-lg gap-16 pt-10 pb-16 hover-nav">
           <li>
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="#service">Service</a>
+            <a href="/#service">Service</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="/#about">About</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="/#contact">Contact</a>
           </li>
         </ul>
       </nav>

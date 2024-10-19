@@ -17,7 +17,7 @@ export default function MissionVision() {
       <div
         id="mission"
         ref={missionDiv}
-        className={`scroll-m-32 hover:scale-110 bg-primary absolute top-[15%] lg:top-[25%] left-0 w-[340px] lg:w-[500px] rounded-r-full p-8 lg:p-10 text-white space-y-4 transition-transform duration-700 ease-in-out ${
+        className={`scroll-m-32 lg:hover:scale-110 bg-primary absolute top-[15%] lg:top-[25%] left-0 w-[340px] lg:w-[500px] rounded-r-full p-8 lg:p-10 text-white space-y-4 transition-transform duration-700 ease-in-out ${
           missionDivIsInView
             ? "transform translate-x-0"
             : "transform translate-x-[-200px]"
@@ -44,7 +44,7 @@ export default function MissionVision() {
       <div
         id="value"
         ref={valueDiv}
-        className={`scroll-m-10 hover:scale-110 min-h-[200px] bg-primary absolute bottom-[0%] lg:bottom-[10%] right-0 w-[340px] lg:w-[500px] rounded-l-full p-10 text-white space-y-2 transition-transform duration-700 ease-in-out ${
+        className={`scroll-m-32 lg:hover:scale-110 min-h-[200px] bg-primary absolute bottom-[0%] lg:bottom-[10%] right-0 w-[340px] lg:w-[500px] rounded-l-full p-10 text-white space-y-2 transition-transform duration-700 ease-in-out ${
           valueDivIsInView
             ? "transform translate-x-0"
             : "transform translate-x-[200px]"
